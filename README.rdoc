@@ -3,3 +3,5 @@
 This is an app to monitor your financial stocks and also connect with friends and see their stocks too.
 
 Powered by www.dspheretech.com
+
+
