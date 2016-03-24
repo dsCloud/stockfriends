@@ -1,5 +1,5 @@
 <div id="friend-lookup">
-<h3>Search for friends</h3>
+<h3>Search friends</h3>
 <%= form_tag search_friends_path, remote: true, method: :get, id: 'friend-lookup-form' do %>
 <div class="form-group row no-padding text-center col-md-12">
 <div class="col-md-10">
@@ -8,7 +8,7 @@
                                 class: 'form-control search-box input-lg' %>
 </div>
 <div class="col-md-2"><%= button_tag(type: :submit, class: 'btn btn-lg btn-success') do %>
-  <i class='fa fa-search'></i> Fetch a friend
+  <i class='fa fa-search'></i> Search
 <% end %>
 </div>
 </div>
@@ -26,10 +26,10 @@
                 <td><%= link_to "View Profile", user_path(user),
                                                         class: "btn btn-xs btn-success" %>
                   <% if current_user.not_friends_with?(user.id) %>
-                  <%= link_to "Add as my friend", add_friend_path(user: current_user, friend: user),
+                  <%= link_to "Add friend", add_friend_path(user: current_user, friend: user),
                                                    class: 'btn btn-xs btn-success', method: :post %>
                   <% else %>
-                            <span class='label label-primary'>You are friends</span>
+                            <span class='label label-primary'>Friends</span>
                       <% end %>
                         </td>
                       </tr>
@@ -39,7 +39,7 @@
                   </div>
                   <% else %>
          <p class="lead col-md-12">
-                No one match this search criteria
+                search not found
           </p>
       <% end %>
       <% end %>
